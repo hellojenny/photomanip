@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Jenny's Photo Manipulation Workshop</title>
+		<link rel="shortcut icon" href="favico.png">
+		<link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Inconsolata:400,700|Yantramanav:400,700" rel="stylesheet">
+		<style>
+			body {
+				margin: 0;
+				background: #f7f7f7;
+			}
+
+			h1 {
+				font: 700 2.2em/1.2em 'Yantramanav';
+				letter-spacing: 1px;
+				color: #333;
+				width: 90%;
+			}
+
+			h2 {
+				font: 700 1.5em/0.8em 'Yantramanav';
+				margin-bottom: 0;
+				letter-spacing: 0.02em;
+				color: #666;
+			}
+
+			h3 {
+				font: 700 2.2em/1.2em 'Inconsolata';
+				color: #333;
+				margin-bottom: 20px;
+			}
+
+			p {
+				font: 400 0.9em/1.6em 'Yantramanav';
+				color: #56534f;
+			}
+
+			a, a:active, a:visited {
+				text-decoration: none;
+			}
+
+			a:hover, h2 a:hover { text-decoration: underline; }
+
+			img {
+				max-width: 100%;
+			}
+
+			.center {
+				display: block;
+				margin: 10px auto;
+				max-width: 360px;
+			}
+
+				.center img {
+					max-width: 49%;
+				}
+
+				.file {
+					display: inline-block;
+					font: 400 1em/1.2em 'Inconsolata';
+					color: #333;
+					padding: 10px;
+					margin-bottom: 5px;
+					border: 1px solid #333;
+					width: 80%;
+					text-align: center;
+				}
+
+			.emoji {
+			    width: 1.3em;
+			    height: 1.3em;
+			    display: inline-block;
+			    margin-bottom: -0.35em;
+			}
+
+			.wrapper {
+				position: relative;
+				padding: 20px;
+				background: #fff;
+			}
+
+			#masks, #adjustment, #manip {
+				border-top: 10px solid #e59f26;
+			}
+
+			@media screen 
+				and (min-device-width: 480px) 
+				and (min-width: 480px) {
+
+					.center {
+						max-width: 480px;
+					}
+
+					.file { width: 40%; }
+
+					.wrapper {
+						width: 68%;
+						max-width: 630px;
+						margin: 6vh auto;
+						padding: 1em 2em;
+					}
+
+					#masks, #adjustment, #manip {
+						border: 10px solid #e59f26;
+						border-left-width: 1px;
+						border-right-width: 1px;
+					}
+
+					h1, h2 { width: 90%; }
+					p { width: 90%; }
+			}
+
+			@media screen 
+				and (min-device-width: 840px) 
+				and (min-width: 840px) {
+
+					.wrapper {
+						margin: 10vh auto;
+						padding: 2em 3em 6em;
+					}
+
+					img.novas {
+						margin: 3em auto -7.7em;
+					}
+			}
+
+			#adjustment { border-color: #d38d9a; }
+			#manip { border-color: #6272b6; }
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<h3>Welcome, young padawan.<br>Tonight, we splice realities.</h3>
+			<p>Welcome to Jenny's Photo Manipulation Workshop! This tutorial will quickly cover the basics of Photoshop through a fun exercise, then we'll try it ourselves. Here are key topics we will cover:</p>
+			<h2>1. <a href="#masks" style="color: #e59f26">Layer Masks</a></h2>
+			<h2>2. <a href="#adjustment" style="color: #d38d9a">Adjustment Layers</a></h2>
+			<h2>3. <a href="#manip" style="color: #6272b6">Manipulation</a></h2>
+			<p>To start, let's create a new Photoshop document. Use default settings (for Document Type, put "Default Photoshop Size"), or create a <strong>7 by 5 in</strong> canvas at a resolution of <strong>300 pixels/inch.</strong></p>
+		</div> 
+
+		<div class="wrapper" id="masks">
+			<h1>1. Layer Masks</h1>
+			<p>First, let's choose one of these random stock photos I found on the internet. Right click and copy one of them to your clipboard.</p>
+			<div class="center">
+				<img src="ben.jpg" alt="Stock Photo 1">
+				<img src="nathan.jpg" alt="Stock Photo 2">
+			</div>
+			<p>Make another new document in Photoshop, paste this photo in, and merge it down with your background layer. Duplicate this background layer to make a "Background copy" layer. In between these two, create a filler layer with a solid color.</p>
+			<p>On the top-most "Background copy" layer, <strong>create a clipping mask.</strong></p>
+			<img class="center "src="clipping-mask-0.jpg" height="300" alt="">
+			<p>With the mask selected, equip the <strong>Brush tool (b)</strong>. Anything you paint on this mask in <strong>black</strong> will be hidden. Anything <strong>white</strong> will still show through!</p>
+			<img class="center "src="clipping-mask-1.jpg" height="300" alt="">
+			<p>When you're done, you can right click on the "Background copy" layer &gt; Apply Layer Mask, and delete all the other layers. Go to Image &gt; Trim to crop it, and then save your cutout as a PNG! You can now close this document.</p>
+			<img class="center "src="clipping-mask-2.jpg" height="300" alt="">
+		</div>
+
+		<div class="wrapper" id="adjustment">
+			<h1>2. Adjustment Layers</h1>
+			<p>For your convenience, I've cut out the stock models I found randomly on the internet for you. Yeah, you're welcome.</p>
+			<div class="center" style="width: 405px;">
+				<img src="ben-cutout.png" height="170" style="margin-right: 50px;" alt="Stock Photo 1">
+				<img src="nathan-cutout.png" height="170" alt="Stock Photo 2">
+			</div>
+			<p>Let's take the stock models I found randomly on the internet and drop them into this intimate Obi Wan and Yoda scene in The Phantom Menace. Copy and paste this image into our original document.</p>
+			<img class="center" src="obiwan.png" height="140" alt="">
+			<p>Paste the stock model cutout onto the scene. If you go to <strong>Window &gt; Adjustments</strong>, a dialog should show up with a lot of different kinds of adjustment filters. I'll be using Curves and Hue/Saturation, but feel free to play around. Do what looks right.</p>
+			<p>I want to apply Curves and Hue/Saturation to <em>just</em> our random stock model, not the background. To do this, hold <strong>Option (alt)</strong>, hover in between the adjustment layer and our model's layer, and click. This selectively applies the top layer to only the layer below it!</p>
+			<img class="center "src="adjustment-1.jpg" height="260" alt="">
+			<p>You can add adjustments on top of everything to give the overall image a cohesive atmosphere.</p>
+		</div>
+
+		<div class="wrapper" id="manip">
+			<h1>3. Manipulation</h1>
+			<p>There are a few things we can do to mess with our photos even more. We can...</p>
+			<h2>...Add more things</h2>
+			<p>Just because we totally can, let's drop this parrot in there somewhere. I love technology.</p>
+			<img class="center "src="parrot.png" height="260" alt="">
+			<h2>...Subvert emotions</h2>
+			<p>Using the <strong>liquify</strong> tool and a little creativity, anything is possible. Filter &gt; Liquify.</p>
+			<div class="center" style="width: 405px;">
+				<img src="nathan-normal.jpg" height="220" alt="Stock Photo 1">
+				<img src="nathan-notnormal.jpg" height="220" alt="Stock Photo 2">
+			</div>
+			<h2>...Hurt our friends</h2>
+			<p>Using <strong>blending modes</strong>, we can overlay certain colors and shadows to dramatize the situation.</p>
+			<div class="center" style="width: 405px;">
+				<img src="bruised-ben.jpg" height="220" alt="Stock Photo 1">
+				<img src="bruised-ben-2.jpg" height="220" alt="Stock Photo 2">
+			</div>
+			<h2>...Really hurt them</h2>
+			<p>I love technology.</p>
+			<img class="center" src="ben-broken.jpg" height="300" alt="Stock Photo 1">
+			<p>You can use this circuit board image (or any texture) and Photoshop it into your stock models.</p>
+			<img class="center" height="200" src="circuit-board.jpg" alt="">
+
+			<h2>Final Products</h2>
+			<img class="center" src="nathan-done.jpg" alt="">
+			<img class="center" src="ben-done.jpg" alt="">
+		</div>
+
+		<div class="wrapper">
+			<h3>Powerful you have become. Think outside of this world.</h3>
+			<p>Below are the finished Photoshop files of our manipulations for your reference.</p>
+			
+			<div class="center">
+				<a class="file" href="nathan.psd">Download <strong>nathan.psd</strong></a>
+				<a class="file" href="ben.psd">Download <strong>ben.psd</strong></a>
+			</div>
+
+			<div class="center">
+				<img src="texture-1.png" height="220" alt="">
+				<img src="texture-2.png" height="220" alt="">
+				<img src="texture-3.jpg" height="220" alt="">
+				<img src="texture-4.png" height="220" alt="">
+				<img src="clooney.png" height="220" alt="">
+				<img src="fish.png" height="140" alt="">
+				<img src="fish-2.png" height="140" alt="">
+			</div>
+
+		</div>
+	</body>
+</html>
